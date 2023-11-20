@@ -99,8 +99,11 @@ app.delete('/todos/:id', (req, res) => {
 });
 
 // for all other routes, return 404
-app.use((req, res, next) => {
-  res.status(404).send();
-});
+// app.use((req, res, next) => {
+//   res.status(404).send();
+// });
 
+app.listen(3000, ()=>{
+  console.log("Listning on 3000 file")
+})
 module.exports = app;
