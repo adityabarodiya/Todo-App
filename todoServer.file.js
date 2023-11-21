@@ -103,7 +103,7 @@ app.delete('/todos/:id', (req, res) => {
 //   res.status(404).send();
 // });
 
-app.listen(3000, ()=>{
+app.listen(port, ()=>{
   console.log(`Listining on port ${port} `);
 })
 module.exports = app;
