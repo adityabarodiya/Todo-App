@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require("fs");
-
+const port = process.env.PORT || 3001;
 const app = express();
 
 app.use(bodyParser.json());
@@ -104,6 +104,6 @@ app.delete('/todos/:id', (req, res) => {
 // });
 
 app.listen(3000, ()=>{
-  console.log("Listning on 3000 file")
+  console.log(`Listining on port ${port} `);
 })
 module.exports = app;
