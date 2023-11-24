@@ -70,7 +70,7 @@
       margin-right: 10px;
     }
 
-     .delbtn {
+    .delbtn {
       background-color: rgb(252, 12, 12);
       color: #fff;
       padding: 5px 10px;
@@ -83,7 +83,7 @@
     .delbtn:hover {
       background-color: #d32f2f;
     }
-    .editbtn{
+    .editbtn {
       background-color: rgb(12, 196, 252);
       color: #fff;
       padding: 5px 10px;
@@ -94,7 +94,6 @@
     }
     .editbtn:hover {
       background-color: rgb(5, 93, 122);
-
     }
   </style>
   <script>
@@ -103,7 +102,7 @@
     });
 
     let url = "http://localhost:3000";
-    // url = "https://todo-app-2bjj.onrender.com/"
+    url = "https://todo-app-2bjj.onrender.com/"
 
     function editTodo(id, currentTitle, currentDescription) {
       console.log("dfkjglsdjg");
@@ -171,9 +170,9 @@
       console.log(data);
       let todo = data;
       // for (const todo of data) {
-        const childEle = document.createElement("div");
-        childEle.innerHTML = `<span>${todo.title}</span><span>${todo.description}</span><button class ="editbtn" onclick="editTodo(${todo.id},'${todo.title}','${todo.description}')">Edit</button><button class="delbtn" onclick="deleteTodo(${todo.id})">Delete</button>`;
-        mainArea.appendChild(childEle);
+      const childEle = document.createElement("div");
+      childEle.innerHTML = `<span>${todo.title}</span><span>${todo.description}</span><button class ="editbtn" onclick="editTodo(${todo.id},'${todo.title}','${todo.description}')">Edit</button><button class="delbtn" onclick="deleteTodo(${todo.id})">Delete</button>`;
+      mainArea.appendChild(childEle);
       //}
     }
 
@@ -194,9 +193,8 @@
         headers: {
           "Content-Type": "application/json",
         },
-      }).then(()=>{
-
-        getData()
+      }).then(() => {
+        getData();
       });
     }
   </script>
