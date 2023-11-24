@@ -72,15 +72,12 @@ app.delete("/todos/:id", (req, res) => {
 app.get('/',(req,res) =>{
     res.sendFile(path.join(__dirname,"index.html"))
 })
-// for all other routes, return 404
-// app.use((req, res, next) => {
-//   res.status(404).send();
-// });
 
-
-
-app.listen(port, ()=>{
-  console.log(`Listining on port ${port} simple `);
+app.get('/',(req,res) => {
+  res.sendFile(path.join(__dirname,"style.css"))
 })
 
+app.listen(port, () => {
+  console.log(`Listining on port ${port} simple `);
+})
 module.exports = app;
